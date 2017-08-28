@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Architects+Daughter&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar page-header" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="{% url 'post_new' %}" class="top-menu"></a>
+                    <h1><a href="/"> the Silent Ninja <img class="image-icon" src="{% static 'images/untitled.png' %}" height=60px width=60px/></a></h1>
+                </div>
+                <nav class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                      <li><a href="{% url 'get_post_type' post_type='Technology' %}" class="nav-content" value="Technology">Technology</a></li>
+                      <li><a href="{% url 'get_post_type' post_type='Food' %}" class="nav-content" value="Food">Food <!-- <img src="{% static 'images/food.png' %}" style="height:3%"/> --></a></li>
+                      <li><a href='#' class="nav-content" value="Places">Places</a></li>
+                      <li><a href='#' class="nav-content" value="About">About <img src="{% static 'images/hearts.png' %}" height="25px"/>  </a></li>
+                    </ul>
+                </nav>
+                <!-- <span class="glyphicon glyphicon-plus"> -->  
+           </div>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>   
+    </body>
+</html>
