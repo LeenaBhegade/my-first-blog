@@ -46,7 +46,9 @@ def get_post_type(request, post_type):
 
 def get_sub_type(request, sub_type, post_type):
     posts = Post.objects.filter(post_type=post_type, sub_type=sub_type)
-    return render(request, 'blog/post_list.html', {'posts':posts , 'sub_types': posts})
+    sub_types = []
+    sub_types.append(next(iter(posts)))
+    return render(request, 'blog/post_list.html', {'posts':posts, 'sub_types':sub_types})
 
 
 @login_required
