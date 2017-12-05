@@ -1,12 +1,22 @@
 .blog-body {
     /*background:  rgba(246, 246, 246, 0.98);*/
-    background:  white;
+    background: #F1F1E9;
 }
 .page-header, .page-header a {
-    /*background-color: #7a1839;*/
     background-color: #18537c;
     margin-top: 0;
     padding: 0px 0px 0px 0px;
+    margin-bottom: -1;
+}
+
+.page-sub-header {
+    background-color: #585351;
+    height: 3em;
+    padding: 10px;
+}
+
+.page-sub-header a{
+    color: white;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -73,18 +83,20 @@ h1, h2, h3, h4 {
     /**border: 0.05em solid #b8b9ba;**/
     box-shadow: 0 7px 6px -6px #18537c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-    width: 40em;
+    /*border: 2px solid #96A7D8;*/
     height: 18em;  
     background-color: white;
     padding: 10px;
-    margin-left: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
+
+    /*font-family: 'Roboto', sans-serif;*/
 
 }
 
 .post-header {
     border-bottom: 1px solid #659EC7;
     margin-bottom: 4px;
+
 }
 
 .post-sub-type {
@@ -92,26 +104,27 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     padding: 7px;
     font-family: 'Quicksand', cursive;
-    border: 1px solid rgba(114, 179, 225, 0.22);
-    /* border-radius: 10px; */
-    background-color: rgb(233, 233, 233);
-    border: 1.2px solid #b9b9b9
     font-weight: bold;
+
+    a {
+        color: white;
+    }
 }
 
 .search-box {
     font-family: 'Quicksand', cursive;
     padding: 7px;
-    border: 1px solid #b9b9b9;
+    margin-bottom: 5px;
+    border: 1.5px solid #969191;
     border-radius: 10px;
     float: right;
-    width: 140px;
+    width: 500px;
     height: 30px;
     margin-right: 10px;
+    color: white;
 }
 
 .hr-line hr {
-
     margin-top: 8px;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -121,34 +134,31 @@ h1, h2, h3, h4 {
 
 .post-width {
     width: 100em;
-
 }
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
     font-size: 30px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .nav-content {
-
     font-family: 'Architects Daughter', cursive;
     font-size: 1.5em;
     vertical-align: bottom;
     color: white;
     /*border-left: 2px dotted;*/
     text-transform: uppercase;
-
 }
 
 .nav.navbar-nav {
-
      float:right;
      margin-top: 25px;
      /*border-right: 2px dotted white;*/
-      
-
 }
 
-.image-icon {
-    
+.post-button {
+    color: blue;
+    border: 1px solid black;
+    font-family: 'Roboto', sans-serif;
 }

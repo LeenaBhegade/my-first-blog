@@ -1,26 +1,28 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-   
-    <div class="row">
-
-    {% for post in sub_types%} 
-        <!-- <span class="sub-type-nav">{{post.sub_type}}</span> -->
-        <span class="post-sub-type">
-          <a href="{% url 'get_sub_type' sub_type=post.sub_type post_type=post.post_type %}"> {{ post.sub_type }} </a>
-        </span>
-    {% endfor %} 
-        <span class="search-box"><i class="glyphicon glyphicon-search"></i> </span>
-        </span>  
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class= "page-sub-header">    
+            
+            {% for post in sub_types%} 
+                <!-- <span class="sub-type-nav">{{post.sub_type}}</span> -->
+                <span class="post-sub-type">
+                  <a href="{% url 'get_sub_type' sub_type=post.sub_type post_type=post.post_type %}"> {{ post.sub_type }} </a>
+                </span>
+            {% endfor %} 
+                <span class="search-box"><i class="glyphicon glyphicon-search white-color"></i> </span>
+            </div>
+        </div>
     </div>
 
-    {% if sub_types %}
-    <span class="hr-line"><hr></span>
-    {% endif %}
+    <div class="content container">
     
    <div class="row">
-   {% for post in posts%}   
-        <div class="post post-list col-lg-6">
+   {% for post in posts %}   
+    <div class="col-md-6 col-xs-12">
+        <div class="post post-list">
             <div class="post-header">
                 <h1>
                     <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
@@ -30,9 +32,11 @@
                 </span>
                 
             </div>
-            <p>{{ post.text|truncatewords:60 }}</p>
+            <p>{{ post.text|truncatewords:50 }}</p>
             <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
         </div>
+    </div>
     {% endfor %} 
+    </div>
     </div>
 {% endblock %}	
