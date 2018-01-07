@@ -24,7 +24,8 @@ SECRET_KEY = 'mjs=2c=bk8$6v5o-&iw1^5-7fna0qy2weqrj-4gcs2$8=0kw7v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+# ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -75,13 +76,20 @@ WSGI_APPLICATION = 'myfirstblog.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'myblog',
+    #     'USER': 'leena',
+    #     'PASSWORD': 'leena',
+    #     'HOST': 'localhost',
+    #     'PORT': '',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myblog',
-        'USER': 'leena',
-        'PASSWORD': 'leena',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 

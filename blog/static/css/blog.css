@@ -1,6 +1,6 @@
 .blog-body {
     /*background:  rgba(246, 246, 246, 0.98);*/
-    background: #F1F1E9;
+    /*background: #F1F1E9;*/
 }
 .page-header, .page-header a {
     background-color: #18537c;
@@ -10,13 +10,14 @@
 }
 
 .page-sub-header {
-    background-color: #585351;
-    height: 3em;
+    /*background-color: #5a0000;*/
+    border-bottom: 1px solid #659EC7;
     padding: 10px;
+    height: 3em;
 }
 
 .page-sub-header a{
-    color: white;
+    color: #34352d;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -38,6 +39,11 @@
 }
 h1, h2, h3, h4 {
     font-family: 'Roboto', Helvetica,Arial, sans-serif;
+}
+
+.post h1 {
+    font-weight: lighter;
+    line-height: 100%;
 }
 
 .date {
@@ -62,6 +68,7 @@ h1, h2, h3, h4 {
 .post {
     font-family: 'Roboto', sans-serif;
     background-color: white;
+    padding: 10px;
 }
 
 .sub-type-nav {
@@ -81,8 +88,8 @@ h1, h2, h3, h4 {
 .post.post-list {
     margin-top: 20px;
     /**border: 0.05em solid #b8b9ba;**/
-    box-shadow: 0 7px 6px -6px #18537c;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    /*box-shadow: 0 7px 6px -6px #18537c;*/
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.25);*/
     /*border: 2px solid #96A7D8;*/
     height: 18em;  
     background-color: white;
@@ -100,14 +107,15 @@ h1, h2, h3, h4 {
 }
 
 .post-sub-type {
-    margin-left: 20px;
+    margin: 10px;
     text-transform: uppercase;
-    padding: 7px;
-    font-family: 'Quicksand', cursive;
+    font-family: 'Nunito', sans-serif;
     font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
 
     a {
-        color: white;
+        color: #92967d;
     }
 }
 
@@ -115,7 +123,7 @@ h1, h2, h3, h4 {
     font-family: 'Quicksand', cursive;
     padding: 7px;
     margin-bottom: 5px;
-    border: 1.5px solid #969191;
+    border: 1px solid #f3f0f0;
     border-radius: 10px;
     float: right;
     width: 500px;
@@ -140,11 +148,13 @@ h1, h2, h3, h4 {
     color: #000000;
     font-size: 30px;
     font-family: 'Nunito', sans-serif;
+    background-color: #c9dcef;
+    padding: 5px;
 }
 
 .nav-content {
     font-family: 'Architects Daughter', cursive;
-    font-size: 1.5em;
+    font-size: 1.8em;
     vertical-align: bottom;
     color: white;
     /*border-left: 2px dotted;*/
@@ -158,7 +168,7 @@ h1, h2, h3, h4 {
 }
 
 .post-button {
+    padding: 10px;
     color: blue;
-    border: 1px solid black;
     font-family: 'Roboto', sans-serif;
 }
