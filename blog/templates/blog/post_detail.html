@@ -2,39 +2,45 @@
 
 {% block content %}
 
-    <div class="post">
-    	<div class="col-xs-12">
-	        {% if post.published_date %}
-	            <div class="date">
-	                {{ post.published_date }}
-	            </div>
-	        {% endif %}
-	        <h1>{{ post.title }}</h1>
-	        <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-    </div>
-    <hr>
+<div class="post add-border col-xs-offset-1 col-xs-10 col-xs-offset-1">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    <!-- </div> -->
+</div>
+<hr>
 
- <a class="post-button" onclick="{% url 'add_comment_to_post' pk=post.pk %}">
- 	Add comment
- </a>
- 
-{% for comment in post.comments.all %}
-    {% if user.is_authenticated or comment.approved_comment %}
-    <div class="comment">
-        <div class="date">
-            {{ comment.created_date }}
-            {% if not comment.approved_comment %}
-                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
-            {% endif %}
-        </div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
+<div class="comment-section col-xs-offset-1 col-xs-10 col-xs-offset-1">
+    <div class="comment-button">
+        <!-- <div class="col-xs-12"> -->
+            <a onclick="{% url 'add_comment_to_post' pk=post.pk %}">
+                Add Comment
+            </a>
+        <!-- </div> -->
     </div>
-    {% endif %}
-{% empty %}
-    <p>No comments here yet :(</p>
-{% endfor %}
+    <div class="comment-data">
+    {% for comment in post.comments.all %}
+    {% if user.is_authenticated or comment.approved_comment %}
+            <div class="date">
+                {{ comment.created_date }}
+                {% if not comment.approved_comment %}
+                    <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                    <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+                {% endif %}
+            </div>
+            <strong>{{ comment.author }}</strong>
+            <p>{{ comment.text|linebreaks }}</p>
+        {% endif %}
+    {% empty %}
+        <p>No comments here yet :(</p>
+    {% endfor %}
+    </div>
+</div>
+
+
 
 {% endblock %}

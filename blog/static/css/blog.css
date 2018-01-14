@@ -14,6 +14,7 @@
     border-bottom: 1px solid #659EC7;
     padding: 10px;
     height: 3em;
+    /*display: none;*/
 }
 
 .page-sub-header a{
@@ -28,10 +29,6 @@
 
 .content {
     margin-left: 120px;
-}
-
-.comment {
-    margin: 20px 0px 20px 20px;
 }
 
 .page-header h1 {
@@ -71,6 +68,10 @@ h1, h2, h3, h4 {
     padding: 10px;
 }
 
+.post.add-border {
+    border-bottom: 1px solid #e4e6e8;
+}
+
 .sub-type-nav {
 
     border: 0.5px solid #D0D0D0;
@@ -108,7 +109,7 @@ h1, h2, h3, h4 {
 
 .post-sub-type {
     margin: 10px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -152,6 +153,11 @@ h1, h2, h3, h4 {
     padding: 5px;
 }
 
+.post h1 a:hover{
+    text-decoration: none;
+    color: #6699CC;
+}
+
 .nav-content {
     font-family: 'Architects Daughter', cursive;
     font-size: 1.8em;
@@ -167,8 +173,35 @@ h1, h2, h3, h4 {
      /*border-right: 2px dotted white;*/
 }
 
-.post-button {
-    padding: 10px;
-    color: blue;
+
+
+.comment-section {
     font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+}
+
+.comment-button {
+    border: 1px solid gray;
+    width: 9%;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    background-color: #1963988c;
+    box-shadow: inset 0 1px 0 #66bfff;
+}
+
+.comment-button:hover {
+    background-color: #18537c;
+}
+
+.comment-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.comment-data {
+    /*margin: 20px 0px 20px 20px;*/
+    padding-top: 10px;
+
+
 }
