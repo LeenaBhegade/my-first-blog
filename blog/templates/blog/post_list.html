@@ -8,7 +8,6 @@
                 <div class="page-sub-header"> 
             {% endif %}
             {% for post in sub_types%} 
-                <!-- <span class="sub-type-nav">{{post.sub_type}}</span> -->
                 <span class="post-sub-type">
                   <a href="{% url 'get_sub_type' sub_type=post.sub_type post_type=post.post_type %}"> {{ post.sub_type }} </a>
                 </span>
